@@ -94,11 +94,13 @@ def blobassignation(true_info, reco_info, tag):
         totalevents = totalevents+1
 
     
-        if d_A1<R_12 or d_B2<R_12 or (d_A1<d_B1 and  d_A1<d_A2 and d_A1<d_B2) or (d_B2<d_B1 and d_B2<d_A2 and d_B2<d_A1):
+        #if d_A1<R_12 or d_B2<R_12 or (d_A1<d_B1 and  d_A1<d_A2 and d_A1<d_B2) or (d_B2<d_B1 and d_B2<d_A2 and d_B2<d_A1):
+        if d_A1<R_12 or d_B2<R_12 or (d_A1<d_B1 and  d_A1<d_A2) or (d_B2<d_B1 and d_B2<d_A2):
             events12AB = events12AB+1
             direction12 = True
             #print('direction A1 B2')
-        elif d_A2<R_12 or d_B1<R_12 or (d_A2<d_B1 and d_A2<d_A1 and d_A2<d_B2) or (d_B1<d_B2 and d_B1<d_A1 and d_B1<d_A2):
+        #elif d_A2<R_12 or d_B1<R_12 or (d_A2<d_B1 and d_A2<d_A1 and d_A2<d_B2) or (d_B1<d_B2 and d_B1<d_A1 and d_B1<d_A2):
+        elif d_A2<R_12 or d_B1<R_12 or (d_A2<d_B1 and d_A2<d_A1) or (d_B1<d_B2 and d_B1<d_A1):
             events12BA = events12BA+1
             #print('direction A2 B1')
             direction21 = True
